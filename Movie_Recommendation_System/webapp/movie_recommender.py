@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 import joblib
 
-movies = joblib.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\movies_list.pkl", 'rb'))
-similarity = joblib.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\similarity.pkl", 'rb'))
+movies = joblib.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\movies_list.joblib", 'rb'))
+similarity = joblib.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\similarity.joblib", 'rb'))
 
 @st.cache_data
 def fetch_poster(title):
