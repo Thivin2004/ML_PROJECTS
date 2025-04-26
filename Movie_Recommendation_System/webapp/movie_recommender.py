@@ -2,6 +2,14 @@ import streamlit as st
 import requests
 import joblib
 
+import subprocess
+import sys
+
+# Print installed packages
+subprocess.check_call([sys.executable, "-m", "pip", "freeze"])
+
+import joblib
+
 
 import subprocess
 import sys
