@@ -2,6 +2,17 @@ import streamlit as st
 import requests
 import joblib
 
+
+import subprocess
+import sys
+
+# Try to import joblib, install it if it's not found
+try:
+    import joblib
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 'joblib==1.4.2'])
+    import joblib
+
 movies = joblib.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\movies_list.joblib", 'rb'))
 similarity = joblib.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\similarity.joblib", 'rb'))
 
