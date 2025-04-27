@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 import pickle
 
-movies = pickle.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\movies_list.pkl", 'rb'))
-similarity = pickle.load(open("E:\\ML_PROJECTS\\Movie_Recommendation_System\\similarity.pkl", 'rb'))
+movies = pickle.load(open("Movie_Recommendation_System/movies_list.pkl", 'rb'))
+similarity = pickle.load(open("Movie_Recommendation_System/similarity.pkl", 'rb'))
 
 @st.cache_data
 def fetch_poster(title):
